@@ -1,0 +1,170 @@
+/* -----------------------------
+   Pastel Retro Theme for CyberMaze
+------------------------------ */
+
+:root {
+  --bg-color: #fffaf3;
+  --primary: #6ec6ca;         /* Mint Green */
+  --accent: #f7a072;          /* Peach */
+  --highlight: #aec6cf;       /* Baby Blue */
+  --highlight-2: #c3aed6;     /* Lavender */
+  --text-dark: #333;
+  --text-light: #555;
+  --btn-hover: #fcd5ce;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-dark);
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Courier New', monospace;
+  color: var(--accent);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Panels & Level Sections */
+.panel {
+  background: white;
+  border: 3px dashed var(--highlight);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 8px 8px var(--highlight-2);
+}
+
+/* Buttons */
+button, .btn {
+  background: var(--primary);
+  color: white;
+  font-size: 1.4rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin: 1rem auto;
+  box-shadow: 3px 3px 0px var(--highlight-2);
+}
+
+button:hover, .btn:hover {
+  background: var(--btn-hover);
+  color: var(--text-dark);
+  transform: scale(1.05);
+}
+
+/* Inputs */
+input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--highlight-2);
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* Leaderboard Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+th, td {
+  border: 2px solid var(--highlight);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+th {
+  background: var(--highlight-2);
+  color: white;
+}
+
+/* Restart and Navigation Buttons */
+.restart-button, .leaderboard-button {
+  background: var(--accent);
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px var(--highlight);
+}
+
+.restart-button:hover, .leaderboard-button:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Layout Helpers */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  button, .btn, .restart-button {
+    width: 90%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+}
+

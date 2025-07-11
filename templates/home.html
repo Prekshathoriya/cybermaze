@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CyberMaze Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Welcome to CyberMaze!</h1>
+        <p>You are an ethical hacker solving puzzles to test your skills.</p>
+        <a href="{{ url_for('level1') }}" class="btn">Start Level 1</a>
+        <a href="{{ url_for('leaderboard') }}" class="btn">View Leaderboard</a>
+    </div>
+</body>
+</html>

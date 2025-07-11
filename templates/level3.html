@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Level 3 - CyberMaze</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 LEVEL 3: Final Challenge</h2>
+        <p>Enter the secret password to complete CyberMaze.</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="answer" placeholder="Enter secret password" required />
+            <button type="submit">Submit</button>
+        </form>
+
+        <a href="{{ url_for('home') }}" class="btn">Restart Game</a>
+    </div>
+</body>
+</html>

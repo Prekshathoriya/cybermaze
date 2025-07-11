@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Level 2 - CyberMaze</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 LEVEL 2: Cipher Decryption Puzzle</h2>
+        <p>A secret message is encrypted with a Caesar cipher (shift 3): <strong>{{ encrypted_msg }}</strong></p>
+        <p>Decrypt it to continue.</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="answer" placeholder="Enter decrypted message" required />
+            <button type="submit">Submit</button>
+        </form>
+
+        <a href="{{ url_for('home') }}" class="btn">Restart Game</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Level 1 - CyberMaze</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h2>🔐 LEVEL 1: Brute Force Simulation</h2>
+        <p>Your mission: Guess the 3-digit admin PIN. You have {{ attempts_left }} attempts left.</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        {% if attempts_left > 0 %}
+        <form method="post">
+            <input type="text" name="pin" maxlength="3" placeholder="Enter 3-digit PIN" required />
+            <button type="submit">Submit</button>
+        </form>
+        {% else %}
+        <p>No attempts left. <a href="{{ url_for('home') }}">Restart</a></p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="btn">Restart Game</a>
+    </div>
+</body>
+</html>
